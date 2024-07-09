@@ -31,23 +31,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// const percentageElements = document.querySelectorAll('[id^="percentage-"]');
-//     percentageElements.forEach(element => {
-//         const percentage = parseFloat(element.getAttribute('percentage'));
-//         const barId = element.id.replace('percentage', 'topbar');
-//         const topBar = document.getElementById(barId);
-//         if (topBar) {
-//             topBar.style.width = (percentage / 100) * 245 + 'px';
-//         }
-//     });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const reviewData = [
-        { stars: 5, percentage: 90 },
-        { stars: 4, percentage: 75 },
-        { stars: 3, percentage: 50 },
-        { stars: 2, percentage: 25 },
-        { stars: 1, percentage: 10 }
+        { stars: 5, percentage: 75 },
+        { stars: 4, percentage: 50 },
+        { stars: 3, percentage: 30 },
+        { stars: 2, percentage: 90 },
+        { stars: 1, percentage: 20 }
     ];
 
    const mainContainer = document.querySelector('.main_container_reviewRate_right');
@@ -115,3 +107,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     })
 }); 
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerMenu.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+    });
+});
